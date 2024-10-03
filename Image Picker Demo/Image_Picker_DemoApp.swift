@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Firebase
+import FirebaseFirestore
+import FirebaseStorage
 
 @main
 struct Image_Picker_DemoApp: App {

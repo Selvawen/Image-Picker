@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyAEacB74QPIlU4GF4btrcsiaiWnZX2L3l0</string>
+	<string>AIzaSyCk_PVIwJ5o4EI3tmime7DncNXZumTchic</string>
 	<key>GCM_SENDER_ID</key>
-	<string>312683284855</string>
+	<string>508276780092</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Ben.Image-Picker-Demo</string>
 	<key>PROJECT_ID</key>
-	<string>fir-storage-demo-224ab</string>
+	<string>fir-storage-demo-8870d</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-storage-demo-224ab.appspot.com</string>
+	<string>fir-storage-demo-8870d.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:312683284855:ios:e81f80f7fd5ec9897bb972</string>
+	<string>1:508276780092:ios:01ff7167f220425f4b2739</string>
 </dict>
 </plist>
