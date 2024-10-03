@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import FirebaseStorage
+import FirebaseFirestore
 
 struct ContentView: View {
     
@@ -29,13 +31,53 @@ struct ContentView: View {
             } label: {
                 Text("Select a Photo")
             }
+            // Upload Button
+            if selectedImage != nil {
+                Button {
+                    uploadPhoto()
+                } label: {
+                    Text("Upload photo")
+                }
+            }
+            
+            
         }
         .sheet(isPresented: $isPickerShowing, onDismiss: nil) {
             ImagePicker(selectedImage: $selectedImage, isPickerShowing: $isPickerShowing)
         }
+    }
+        
+        func uploadPhoto(){
+            guard selectedImage != nil else {
+                return
+            }
+            
+            let storageRef = Storage.storage().reference()
+            
+            let imageData = selectedImage!.jpegData(compressionQuality: 0.8)
+            
+            guard imageData != nil else {
+                return
+            }
+            
+            let fileRef = storageRef.child("images/\(UUID().uuidString).jpg")
+            
+            let uploadTask = fileRef.putData(imageData!, metadata: nil) {
+                metadata, error in
+                
+                
+                if error == nil && metadata != nil {
+                    
+                    let db = Firestore.firestore()
+                    db.collection("images").document()
+                }
+            }
+        }
+        
+        
         
         }
-    }
+    
 
 
 struct ContentView_Previews: PreviewProvider{
